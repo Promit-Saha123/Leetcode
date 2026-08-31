@@ -7,11 +7,11 @@ class Solution(object):
 
         groups = {}
         
-        for word in strs:
+        for word in strs: # n
 
             count = [0] * 26 
 
-            for char in word:
+            for char in word: # m
                 count[ord(char) - ord("a")] += 1 # running tally of letter frequencies
             
             key = tuple(count) # allows as key because it is now immutable
@@ -24,5 +24,5 @@ class Solution(object):
         return list(groups.values()) # converts dictionary values into a list
 
 
-            
+        # O(m*n) Space: m*n
 
